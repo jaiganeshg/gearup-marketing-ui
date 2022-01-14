@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Footer from './components/Footer';
+import QuestionBar from './components/QuestionBar';
+import TodoContainer from './components/TodoContainer';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="qyun-answers">
+          Qyun answers in: हिन्दी •  বাংলা • తెలుగు •  मराठी • தமிழ் •  ગુજરાતી • ಕನ್ನಡ • മലയാളം •  ਪੰਜਾਬੀ
+        </div>
+          <video controls>
+            <source src="globe.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        <QuestionBar />
+        {/* <TodoContainer /> */}
       </header>
+      <Footer />
     </div>
   );
 }
