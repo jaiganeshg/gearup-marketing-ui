@@ -9,15 +9,21 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="qyun-answers">
-          Qyun answers in: हिन्दी •  বাংলা • తెలుగు •  मराठी • தமிழ் •  ગુજરાતી • ಕನ್ನಡ • മലയാളം •  ਪੰਜਾਬੀ
+          Qyun answers in:
+          <a href="">हिन्दी</a>•
+          <a href="">বাংলা</a>•
+          <a href="">తెలుగు</a>•
+          <a href="">मराठी</a>•
+          <a href="">தமிழ்</a>•
+          <a href="">ગુજરાતી</a>•
+          <a href="">ಕನ್ನಡ</a>•
+          <a href="">മലയാളം</a>•
+          <a href="">ਪੰਜਾਬੀ</a> 
         </div>
-          <video controls>
-            <source src="globe.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        <QuestionBar />
-        {/* <TodoContainer /> */}
       </header>
+      <body className="app-body">
+         <QuestionBar />
+      </body>
       <Footer />
     </div>
   );

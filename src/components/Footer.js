@@ -8,18 +8,21 @@ export default function Footer() {
           <img className="emoji" alt="heart" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"/></g-emoji>
         </p> */}
       </div>
-      <div className="question-india">? India</div>
-      <div className="footer-links">
-        <div className="left-footer-links">
-          <div className="separated-links">About</div>
-          <div className="separated-links">How Qyun works</div>
-        </div>
-        <div className="right-footer-links">
-          <div className="separated-links">Privacy</div>
-          <div className="separated-links">Terms</div>
-          <div className="separated-links">Settings</div>
-        </div>
+      <div className="footer-card">
+        <div className="footer-tag1">? India</div>
+        <div className="footer-tag2">
+          <div>
+            <a className="pl-0" href="">About</a>
+            <a href="">How Qyun works</a>
+          </div>
+          <div>
+            <a href="">Privacy</a>
+            <a href="">Terms</a>
+            <a className="pr-0" href="">Settings</a>
+          </div>
       </div>
+      </div>
+      
     </div>
   );
 }

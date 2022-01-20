@@ -15,10 +15,15 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.app-body{
+  height: calc(100vh - 210px);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 .App-header {
   /* background-color: #282c34; */
-  min-height: 88vh;
+  /* min-height: 88vh; */
   /* display: flex; */
   /* flex-direction: column;
   align-items: center;
@@ -30,7 +35,6 @@
 .App-link {
   color: #61dafb;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -116,6 +120,15 @@
   align-items: flex-end;
   height: 50px;
   color: #001D9A;
+  font-family: Nunito;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.61;
+}
+a{
+  padding: 0 6px;
+  color: #001D9A !important;
 }
 .question-row {
   display: flex;
@@ -128,20 +141,19 @@
 }
 
 .question-bar {
-  border-radius: calc(0.5 * 100px);
+  border-radius: 40px;
   border: 1px solid #707070;
-  /* background: #73AD21; */
-  height: 50px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 5%;
-  margin-right: 5%;
-  padding-left: 5%;
-  width: 50%;
-  /* padding: 20px; 
-  width: 200px;
-  height: 50px;  */
+  width: 584px;
+  max-width: 584px;
+  padding-left: 20px;
+  font-family: Nunito;
+  font-weight: normal;
+  font-size: 14px;
+  color: #000;
 }
 .answers {
   justify-content: center;
@@ -149,75 +161,86 @@
   height: 50px;
   width: 50%;
 }
-
+.questionfield{
+  background: #fff;
+  width: 400px;
+  height: 42px;
+  z-index: 2;
+  margin-right: -11%;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .answer-one {
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 42px;
   background: #D0CCCC;
   border-radius: calc(0.5 * 100px);
-  border: 1px solid #707070;
-  /* border-top: #fff; */
-  /* border-top-width: 0px;
-  border-bottom-width: 0px; */
-  /* border-bottom: #fff; */
-  width: 50%;
-  margin-right: -10%;
-  padding-left: 5%;
+  border-left: 1px solid #8e8e8e;
+  border-right: 1px solid #8e8e8e;
+  z-index: 1;
+  width: 120px;
+  justify-content: center;
+  font-family: Nunito;
+  font-weight: normal;
+  font-size: 14px;
+  color: #000;
 }
 
 
 .answer-two {
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 42px;
   background: #D0CCCC;
   border-radius: calc(0.5 * 100px);
-  border: 1px solid #707070;
-  width: 60%;
-  padding-left: 5%;
+  width: 120px;
+  justify-content: center;
+  font-family: Nunito;
+  font-weight: normal;
+  font-size: 14px;
+  color: #000;
+  margin-left: -13%;
 }
 
 .footer-logo {
   display: flex;
-  flex-direction: row-reverse;
-  margin-right: 5%;
-  padding-bottom: 10px;
+  justify-content: end;
+  margin-right: 20px;
 }
-.question-india {
-  background-color: #EAECEF;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  padding-left: 2%;
+.footer-logo img{
+  width: 62px;
 }
-.footer-links {
-  background-color: #EAECEF;
-  height: 42px;
+.footer-card{
+  background: rgb(242, 242, 242);
+  margin-top: 20px;
+}
+.footer-tag1{ 
+  padding: 10px 30px;
+  border-bottom: 1px solid #dadce0;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  text-align: left;
+  font-family: Nunito;
+  font-weight: normal;
+  font-size: 14px;
+  color: #000;
+}
+.footer-tag2{
+  padding: 10px 30px;
   display: flex;
   align-items: center;
   justify-content:space-between;
-  padding-left: 2%;
-  padding-right: 2%;
-  margin-top: 5px;
 }
-.left-footer-links {
-  display: flex;
-  width: 10%;
-  justify-content: space-between;;
+.footer-tag2 a{
+  color: #70757a !important;
+  font-family: Nunito !important;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 0px 20px;
 }
-
-.right-footer-links {
-  display: flex;
-  width: 15%;
-  justify-content: space-between;;
-}
-
-.separated-links {
-  margin-left: 2%;
-  flex-shrink: 0;
-}
-
 .video-player {
   width: 80%;
   height: 200px;
@@ -231,10 +254,44 @@ video {
 }
 
 .logo-container {
-  width: 10%;
+  position: absolute;
+  z-index: 3;
+  padding-left: 1px;
+}
+.logo-container img{
+  width: 44px;
+  height: 44px;
+}
+.result-card{
+  height: 299px;
+  width: 380px;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  padding: 25px;
+  font-family: Nunito;
+  font-weight: normal;
+  font-size: 14px;
+  color: #000;
 }
 
-
+.play-circle{
+  width: 186px;
+  height: 186px;
+  background: transparent;
+  border: 1px solid #707070;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wave-left{
+  height: 340px;
+  width: 350px;
+}
+.wave-right{
+  height: 340px;
+  width: 286px;
+}
 @media only screen and (max-width: 600px) {
   .App {
     font-size: small;

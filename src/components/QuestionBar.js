@@ -14,36 +14,92 @@ export default function QuestionBar() {
       answer2: "Blue",
     },
     {
+      id: 2,
+      question: "Do you speak English?",
+      answer1: "Yes",
+      answer2: "No",
+    },
+    {
       id: 3,
-      question: "What did you do today?",
-      answer1: "Nothing",
-      answer2: "Everything",
+      question: "Are you an?",
+      answer1: "Indian",
+      answer2: "NRI",
+    },
+    {
+      id: 4,
+      question: "What is your gender",
+      answer1: "Male",
+      answer2: "Female",
     },
   ];
-  // let questionId = 0;
   let totalQuestions = defaultQuestions.length;
   const [questions] = useState(defaultQuestions);
   const [questionId, setQuestionId] = useState(0);
-  const changeQuestion = () => {
-    console.log(questionId);
+  const [completed, setCompleted] = useState(false);
+  const [answeredList, setAnsweredList] = useState([]);
+  const changeQuestion = (ans) => {
+    var answers = {
+      questions: questions[questionId].question,
+      answers:
+        ans == 1
+          ? questions[questionId].answer1
+          : questions[questionId].answer2,
+    };
+    setAnsweredList([...answeredList, answers]);
     let id = questionId + 1;
-    id = id % totalQuestions;
+    if (id == totalQuestions) {
+      setCompleted(true);
+    }
     setQuestionId(id);
-  }
-
+  };
   return (
-    <div className="question-row">
-      <div className="logo-container">
-        <img src="qyunmark.png" alt="logo" />
-      </div>
-      <div className="question-bar">
-        {questions[questionId].question}
-        <div className="answers" onClick={changeQuestion}>
-          <div className="answer-one">{questions[questionId].answer1}</div>
-          <div className="answer-two">{questions[questionId].answer2}</div>
+    <div>
+      {/* <video id="video" controls autoplay="1">
+        <source src="gearup.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> */}
+      <div className="d-flex justify-content-center">
+        <div>
+          {!completed ? (
+            <div>
+              <div className="logo-container">
+                <img type="button" src="qyunmark.png" alt="logo" />
+              </div>
+              <div className="question-bar">
+                <span className="questionfield">
+                  {questions[questionId].question}
+                </span>
+                <div className="d-flex justify-content-end">
+                  <div className="answer-one" type="button" onClick={() => changeQuestion(1)}>
+                    {questions[questionId].answer1}
+                  </div>
+                  <div className="answer-two" type="button" onClick={() => changeQuestion(2)}>
+                    {questions[questionId].answer2}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="d-flex">
+               <div className="logo-container" style={{marginLeft: '-5%'}}>
+                    <img type="button" src="qyunmark.png" alt="logo" />
+                </div>
+                <div className="result-card">
+                  {answeredList.map((answer, idx) => {
+                    return <div>
+                      <div className="py-2"><span className="pr-3">{answer.questions}</span><span>{answer.answers}</span></div>
+                    </div>
+                  })}
+                </div>
+            </div>
+          )}
+          <div className="qyun-answers">
+            <a href="">Download badge</a>•
+            <a href="">Download iconset</a>•
+            <a href="">Download template</a>
+          </div>
         </div>
       </div>
-      <div className="logo-container"></div>
     </div>
   );
 }
