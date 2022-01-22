@@ -52,12 +52,9 @@ export default function QuestionBar() {
     }
     setQuestionId(id);
   };
+
   return (
     <div>
-      {/* <video id="video" controls autoplay="1">
-        <source src="gearup.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
       <div className="d-flex justify-content-center">
         <div>
           {!completed ? (

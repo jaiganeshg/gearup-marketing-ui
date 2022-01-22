@@ -31,7 +31,14 @@
   font-size: calc(10px + 2vmin);
   color: white; */
 }
-
+video{
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  margin: 0px;
+  height: 100vh;
+  background: black;
+}
 .App-link {
   color: #61dafb;
 }
@@ -246,12 +253,6 @@ a{
   height: 200px;
 }
 
-video {
-  width: 50%;
-  max-height: 100%;
-  margin-bottom: 2%;
-  margin-top: 2%;
-}
 
 .logo-container {
   position: absolute;
